@@ -1,6 +1,8 @@
 # textarea-with-emoji
 
-> My stylish Nuxt.js project
+## DEMO
+
+https://baco16g.github.io/textarea-with-emoji/
 
 ## Build Setup
 
