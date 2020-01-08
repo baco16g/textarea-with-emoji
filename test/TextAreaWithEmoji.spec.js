@@ -9,12 +9,19 @@ describe('TextAreaWithEmoji', () => {
   })
 
   test('insert the emoji when click a emoji in Emoji Picker', (done) => {
-    const wrapper = mount(TextAreaWithEmoji)
+    const wrapper = mount(TextAreaWithEmoji, {
+      data: () => ({
+        value: 'ABC'
+      })
+    })
+    const textarea = wrapper.find('textarea')
     const emoji = wrapper.find('.emoji')
-    wrapper.setData({ value: 'ABC' })
+
     emoji.trigger('click')
+    textarea.element.setSelectionRange(1, 2)
+
     Vue.nextTick().then(() => {
-      expect(wrapper.vm.value).toBe('😀ABC')
+      expect(textarea.element.value).toBe('A😀BC')
       done()
     })
   })
