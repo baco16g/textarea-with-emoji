@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "node-emoji": "^1.10.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "v-emoji-picker": "^2.0.2"
   },
   "devDependencies": {
